@@ -1,4 +1,4 @@
-package exercise4_builder;
+package com.globant.javabootcamp.exercise4;
 
 public class OracleConnectionBuilder extends AbstractBuilder{
 	//Concret Builder

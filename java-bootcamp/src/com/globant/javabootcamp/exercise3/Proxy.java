@@ -1,6 +1,6 @@
-package exercise3_proxy;
+package com.globant.javabootcamp.exercise3;
 
-import DB.DBdummy;
+import com.globant.javabootcamp.db.DBdummy;
 
 public class Proxy implements DBInterface{
 	

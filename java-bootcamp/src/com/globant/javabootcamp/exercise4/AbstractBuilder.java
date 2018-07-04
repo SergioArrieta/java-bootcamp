@@ -1,4 +1,4 @@
-package exercise4_builder;
+package com.globant.javabootcamp.exercise4;
 
 public abstract class AbstractBuilder {
 	//Abstract Builder

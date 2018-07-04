@@ -1,4 +1,4 @@
-package exercise3_proxy;
+package com.globant.javabootcamp.exercise3;
 
 public interface DBInterface {
 
