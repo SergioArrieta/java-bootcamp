@@ -1,6 +1,6 @@
 package com.globant.javabootcamp.exercise2;
 
-public class OracleOLEDB implements OracleConnection{
+public class OracleOLEDB implements OracleConnection {
 
 	@Override
 	public void Connection() {
