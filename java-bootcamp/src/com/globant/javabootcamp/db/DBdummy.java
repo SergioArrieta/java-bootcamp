@@ -7,7 +7,7 @@ public class DBdummy {
 	public static boolean login(String user, String pass) {
 		
 		if (!connection)
-		if(user.equals("SergioArrieta")&(pass.equals("abcd33"))) {
+		if(user.equals("SergioArrieta")&&(pass.equals("abcd33"))) {
 			connection = true;
 			return true;
 		}
