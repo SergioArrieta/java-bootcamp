@@ -1,12 +1,15 @@
 package com.globant.javabootcamp.exercise2;
 
 public class MicrosoftFactory implements AbstractFactory {
+	
+	private static final String ODBC = "ODBC";
+	private static final String OLEDB = "ODBC";
 
 	@Override
 	public MicrosoftSQLServerConnection getMicrosoftSQLServerConnection(String factory) {
-		if (factory.equals("ODBC"))
+		if (ODBC.equals(factory))
 			return new MicrosoftODBC();
-		if (factory.equals("OLEDB"))
+		if (OLEDB.equals(factory))
 			return new MicrosoftOLEDB();
 		return null;
 	}
