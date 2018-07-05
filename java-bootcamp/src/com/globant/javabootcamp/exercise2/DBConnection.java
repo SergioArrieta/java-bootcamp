@@ -1,6 +1,6 @@
 package com.globant.javabootcamp.exercise2;
 
-public interface OracleConnection extends DBConnection {
+public interface DBConnection {
 
 	public void connect();
 }

@@ -27,7 +27,7 @@ public class Proxy implements DBInterface {
 	}
 
 	@Override
-	public String query(String request) {
+	public String getQuery(String request) {
 		return DBdummy.query(request);
 	}
 

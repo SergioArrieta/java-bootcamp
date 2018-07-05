@@ -14,19 +14,19 @@ public class FactoryProducer {
 
 	public static void main(String[] args) {
 
-		Connection connect;
+		DBConnection connection;
 
 		AbstractFactory factory = getFactory("Microsoft");
-		connect = factory.getMicrosoftSQLServerConnection("ODBC");
-		connect.Connection();
-		connect = factory.getMicrosoftSQLServerConnection("OLEDB");
-		connect.Connection();
+		connection = factory.getMicrosoftSQLServerConnection("ODBC");
+		connection.connect();
+		connection = factory.getMicrosoftSQLServerConnection("OLEDB");
+		connection.connect();
 
 		factory = getFactory("Oracle");
-		connect = factory.getOracleConnection("ODBC");
-		connect.Connection();
-		connect = factory.getOracleConnection("OLEDB");
-		connect.Connection();
+		connection = factory.getOracleConnection("ODBC");
+		connection.connect();
+		connection = factory.getOracleConnection("OLEDB");
+		connection.connect();
 
 	}
 

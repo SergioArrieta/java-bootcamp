@@ -10,7 +10,7 @@ public interface DBInterface {
 
 	public String getPass();
 
-	public String query(String request);
+	public String getQuery(String request);
 
 	public boolean connect();
 
