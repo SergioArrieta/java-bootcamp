@@ -7,6 +7,13 @@ public class DBConnection {
 	private int port = 0;
 	private String protocol = "";
 
+	public DBConnection(String path, String serverName, int port, String protocol) {
+		this.path = path;
+		this.serverName = serverName;
+		this.port = port;
+		this.protocol = protocol;
+	}
+
 	public void setPath(String path) {
 		this.path = path;
 	}
