@@ -3,14 +3,14 @@ package com.globant.javabootcamp.db;
 public class DBdummy {
 
 	public static boolean connection = false;
-	
+
 	private final static String userConnection = "SergioArrieta";
 	private final static String passConnection = "abcd33";
 
 	public static boolean login(String user, String pass) {
-		
+
 		if (!connection) {
-			if (user.equals(userConnection) && (pass.equals(passConnection))) {
+			if (userConnection.equals(user) && (passConnection.equals(pass))) {
 				connection = true;
 				return true;
 			}
