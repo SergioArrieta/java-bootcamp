@@ -1,15 +1,15 @@
 package com.globant.javabootcamp.exercise2;
 
 public class FactoryProducer {
-	
+
 	private static final String microsoft = "Microsoft";
 	private static final String oracle = "Oracle";
 
 	public static AbstractFactory getFactory(String choice) {
 
-		if (choice.equalsIgnoreCase(microsoft)) {
+		if (microsoft.equals(choice)) {
 			return new MicrosoftFactory();
-		} else if (choice.equalsIgnoreCase(oracle)) {
+		} else if (oracle.equals(choice)) {
 			return new OracleFactory();
 		}
 		return null;
