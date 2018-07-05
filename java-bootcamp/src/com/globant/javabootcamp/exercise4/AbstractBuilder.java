@@ -11,6 +11,10 @@ public abstract class AbstractBuilder {
 	public abstract void buildPort();
 
 	public abstract void buildProtocol();
+	
+	public void createNewConnection() {
+		connection = new DBConnection();
+	}
 
 	public DBConnection getConnection() {
 		return connection;

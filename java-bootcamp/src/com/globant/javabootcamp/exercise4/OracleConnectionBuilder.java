@@ -3,10 +3,6 @@ package com.globant.javabootcamp.exercise4;
 public class OracleConnectionBuilder extends AbstractBuilder {
 	// Concret Builder
 
-	public OracleConnectionBuilder() {
-		super.connection = new DBConnection();
-	}
-
 	public void buildPath() {
 		super.connection.setPath("default path for Oracle");
 	}

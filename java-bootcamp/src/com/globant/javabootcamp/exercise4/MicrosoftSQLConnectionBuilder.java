@@ -3,10 +3,6 @@ package com.globant.javabootcamp.exercise4;
 public class MicrosoftSQLConnectionBuilder extends AbstractBuilder {
 	// Concret Builder
 
-	public MicrosoftSQLConnectionBuilder() {
-		super.connection = new DBConnection();
-	}
-
 	public void buildPath() {
 		super.connection.setPath("default path for Microsoft");
 	}

@@ -7,12 +7,14 @@ public class BuilderExample {
 		MicrosoftSQLConnectionBuilder microsoftBuilder = new MicrosoftSQLConnectionBuilder();
 		OracleConnectionBuilder oracleBuilder = new OracleConnectionBuilder();
 
+		microsoftBuilder.createNewConnection();
 		director.setBuilder(microsoftBuilder);
 		director.buildConnection();
 
 		DBConnection connection = director.getConnection();
 		System.out.println(connection);
 
+		oracleBuilder.createNewConnection();
 		director.setBuilder(oracleBuilder);
 		director.buildConnection();
 
