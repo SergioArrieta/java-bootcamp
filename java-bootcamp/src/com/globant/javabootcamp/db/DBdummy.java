@@ -9,11 +9,12 @@ public class DBdummy {
 
 	public static boolean login(String user, String pass) {
 		
-		if (!connection)
+		if (!connection) {
 			if (user.equals(userConnection) && (pass.equals(passConnection))) {
 				connection = true;
 				return true;
 			}
+		}
 		return false;
 	}
 
