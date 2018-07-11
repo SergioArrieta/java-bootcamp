@@ -3,7 +3,7 @@ package com.globant.javabootcamp.exercise2;
 public class MicrosoftFactory implements AbstractFactory {
 	
 	private static final String ODBC = "ODBC";
-	private static final String OLEDB = "ODBC";
+	private static final String OLEDB = "OLEDB";
 
 	@Override
 	public MicrosoftSQLServerConnection getMicrosoftSQLServerConnection(String factory) {
