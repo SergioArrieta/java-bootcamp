@@ -4,13 +4,13 @@ public class DBdummy {
 
 	public static boolean connection = false;
 
-	private final static String userConnection = "SergioArrieta";
-	private final static String passConnection = "abcd33";
+	private final static String USER_CONNECTION = "SergioArrieta";
+	private final static String PASS_CONNECTION = "abcd33";
 
 	public static boolean login(String user, String pass) {
 
 		if (!connection) {
-			if (userConnection.equals(user) && (passConnection.equals(pass))) {
+			if (USER_CONNECTION.equals(user) && (PASS_CONNECTION.equals(pass))) {
 				connection = true;
 				return true;
 			}
