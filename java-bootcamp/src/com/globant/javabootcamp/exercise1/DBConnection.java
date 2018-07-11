@@ -8,23 +8,22 @@ public class DBConnection {
 	private String user = "";
 	private String pass = "";
 
-	public static void setConnection(DBConnection connection) {
-		DBConnection.connection = connection;
-	}
-
 	private DBConnection() {
 
 	}
 
-	public static DBConnection getInstance() {
+	public static void setConnection(DBConnection connection) {
+		DBConnection.connection = connection;
+	}
 
+	public static DBConnection getInstance() {
 		if (connection == null) {
 			connection = new DBConnection();
 		}
 		return connection;
 	}
 
-	public boolean connection() {
+	public boolean isConnection() {
 		return DBdummy.login(user, pass);
 	}
 
