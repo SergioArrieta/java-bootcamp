@@ -16,8 +16,9 @@ public class File {
 	public boolean equals(Object obj) {
 		if (obj instanceof File) {
 			File tmpFile = (File) obj;
-			if (this.name.equals(tmpFile.getName()))
+			if (this.name.equals(tmpFile.getName())) {
 				return true;
+			}
 		}
 		return false;
 	}
