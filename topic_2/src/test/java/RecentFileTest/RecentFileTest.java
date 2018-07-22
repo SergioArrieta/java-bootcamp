@@ -1,4 +1,4 @@
-package topic_2;
+package RecentFileTest;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -35,8 +35,8 @@ public class RecentFileTest extends TestCase {
 		recent.openFile(doc2);
 		recent.openFile(doc3);
 
-		Assert.assertEquals(2, recent.getSize());
-		Assert.assertEquals(doc1, recent.getTopFile());
+		Assert.assertEquals(3, recent.getSize());
+		Assert.assertEquals(doc3, recent.getTopFile());
 	}
 
 	@Test
