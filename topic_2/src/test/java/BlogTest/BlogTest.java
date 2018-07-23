@@ -1,32 +1,46 @@
 package BlogTest;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 
 import Blog.Blog;
 import Blog.Entry;
+import RecentFilePackage.File;
+import junit.framework.TestCase;
 
-public class BlogTest {
-	
+public class BlogTest extends TestCase {
+
 	private static final String TITLE = "Title for a new entry";
 	private static final String BODY = "Body for a new entry";
 	private static final String AUTHOR = "Author";
 
-	// buscar initialize para los datos en comun
+	private Entry entry;
+	private Blog blog;
+
+	@Override
+	protected void setUp() throws Exception {
+		super.setUp();
+		entry = new Entry(TITLE, BODY, AUTHOR);
+		blog = new Blog();
+	}
+
 	@Test
 	public void testForPostANewEntry() {
-		Entry newEntry = new Entry(TITLE, BODY, AUTHOR);
-		Blog blog = new Blog();
-		Assert.assertEquals(newEntry, blog.postNewEntry(TITLE, BODY, AUTHOR));
+		Assert.assertEquals(entry, blog.postNewEntry(TITLE, BODY, AUTHOR));
 	}
 
 	@Test
 	public void testForDeleteAEntry() {
-		Entry newEntry = new Entry(TITLE, BODY, AUTHOR);
-		Blog blog = new Blog();
 		blog.postNewEntry(TITLE, BODY, AUTHOR);
-		Assert.assertEquals(true, blog.deleteEntry(newEntry));
+		Assert.assertEquals(true, blog.deleteEntry(entry));
+	}
+
+	@Test
+	public void testForShowTheTenMostRecentEntries() {
+		for (int i = 0; i < 10; i++) {
+			blog.postNewEntry(TITLE, BODY, AUTHOR);
+		}
+		Assert.assertEquals(10, blog.getSize());
 	}
 
 }

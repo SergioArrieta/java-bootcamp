@@ -9,6 +9,18 @@ import junit.framework.TestCase;
 
 public class RecentFileTest extends TestCase {
 
+	private File doc1;
+	private File doc2;
+	private File doc3;
+
+	@Override
+	protected void setUp() throws Exception {
+		super.setUp();
+		doc1 = new File("First doc");
+		doc2 = new File("Second doc");
+		doc3 = new File("Thirst doc");
+	}
+
 	@Test
 	public void testRecentFileIsEmpty() {
 		RecentFile recent = new RecentFile();
@@ -18,19 +30,14 @@ public class RecentFileTest extends TestCase {
 	@Test
 	public void testAddNewFile() {
 		RecentFile recent = new RecentFile();
-		File doc = new File("First doc");
-		recent.openFile(doc);
+		recent.openFile(doc1);
 		Assert.assertEquals(1, recent.getSize());
-		Assert.assertEquals(doc.getName(), recent.getTopFile().getName());
+		Assert.assertEquals(doc1.getName(), recent.getTopFile().getName());
 	}
 
 	@Test
 	public void testAddTheSameDocTwoTimes() {
 		RecentFile recent = new RecentFile();
-		File doc1 = new File("First doc");
-		File doc2 = new File("Second doc");
-		File doc3 = new File("Thirst doc");
-
 		recent.openFile(doc1);
 		recent.openFile(doc2);
 		recent.openFile(doc3);
