@@ -26,7 +26,7 @@ class ShoppingCartTest extends TestCase {
 	public void testForAddANewProductToTheCart() {
 		Assert.assertEquals(true, ShoppingCart.addProduct(product1));
 	}
-	
+
 	@Test
 	public void testForRemoveAProductFromTheCart() {
 		Assert.assertEquals(true, ShoppingCart.removeProduct(product1));
@@ -38,8 +38,5 @@ class ShoppingCartTest extends TestCase {
 		ShoppingCart.addProduct(product2);
 		Assert.assertEquals(31, ShoppingCart.getPrice());
 	}
-	
-	
-	
 
 }
