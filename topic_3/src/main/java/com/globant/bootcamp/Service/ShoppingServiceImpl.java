@@ -7,11 +7,11 @@ package com.globant.bootcamp.Service;
 import com.globant.bootcamp.ShoppingCart.ShoppingCart;
 import com.globant.bootcamp.ShoppingCart.Product;
 
-public class ShoppingServiceImp implements ShoppingService {
+public class ShoppingServiceImpl implements ShoppingService {
 
 	private ShoppingCart cart;
 
-	public ShoppingServiceImp() {
+	public ShoppingServiceImpl() {
 		cart = new ShoppingCart();
 	}
 

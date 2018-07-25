@@ -31,11 +31,11 @@ public class Product {
 		return price;
 	}
 
+	/**
+	 * I redefine the method equals for remove a product from a Shooping Cart.
+	 */
 	@Override
 	public boolean equals(Object obj) {
-		/**
-		 * I redefine the method equals for remove a product from a Shooping Cart.
-		 */
 		if (obj instanceof Product) {
 			Product p = (Product) obj;
 			if (this.name.equals(p.getName()) && this.category.equals(p.getCategory())) {

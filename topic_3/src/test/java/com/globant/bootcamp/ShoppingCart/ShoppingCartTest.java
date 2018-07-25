@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.globant.bootcamp.Service.ShoppingService;
-import com.globant.bootcamp.Service.ShoppingServiceImp;
+import com.globant.bootcamp.Service.ShoppingServiceImpl;
 
 import junit.framework.TestCase;
 
@@ -17,7 +17,7 @@ class ShoppingCartTest extends TestCase {
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
-		ShoppingCart = new ShoppingServiceImp();
+		ShoppingCart = new ShoppingServiceImpl();
 		product1 = new Product("Name", "Category", 15.5);
 		product2 = new Product("Name2", "Category", 15.5);
 	}

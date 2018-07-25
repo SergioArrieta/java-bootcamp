@@ -15,5 +15,5 @@ public interface CrudService {
 
 	public boolean update(int DNI, String character);
 
-	public boolean delete(Person person);
+	public boolean remove(Person person);
 }
